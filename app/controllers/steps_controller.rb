@@ -13,13 +13,13 @@ class StepsController < ApplicationController
 
   def create
     @step = @howtolist.steps.build(params[:step])
-    #if @step.save
+    if @step.save
      # flash[:notice] = "Step has been created."
       redirect_to [@howtolist, @step]
-    #else
+    else
     #  flash[:alert] = "Step has not been created."
-    #  render :action => "new"
-    #end
+      render :action => "new"
+    end
   end
 
   def edit

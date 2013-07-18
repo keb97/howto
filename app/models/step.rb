@@ -3,5 +3,5 @@ class Step < ActiveRecord::Base
   attr_accessible :content, :number
 
   validates :number, :presence => true
-  validates :description, :presence => true
+  validates :content, :presence => true
 end
