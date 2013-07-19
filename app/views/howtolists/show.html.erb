@@ -7,14 +7,14 @@
 
 
 <%= link_to 'Edit', edit_howtolist_path(@howtolist) %> |
-<%= link_to 'Back', howtolists_path %>
+<%= link_to 'Back to see all lists', howtolists_path %>
 <%= link_to "New Step", new_howtolist_step_path(@howtolist) %>
 
 <ul id='steps'>
 <% @howtolist.steps.each do |step| %>
 <li>
-#<%= step.id %> -
-<%= link_to step.number, [@howtolist, step] %>
+#<%= step.number %> -
+<%= link_to step.content, [@howtolist, step] %>
 </li>
 <% end %>
 </ul>

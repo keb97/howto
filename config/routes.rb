@@ -2,6 +2,8 @@ Howto::Application.routes.draw do
   resources :howtolists do
     resources :steps
   end
+  root :to => "howtolists#index"
+
 
 
   # The priority is based upon order of creation:
